@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Belépés</title>
+</head>
+<body style="background-color:#e8e8e3">
+    <header>
+        <img src="kepek/balaton.jpg"width="400" height="200" alt="balaton">  
+		<h1>Balaton téma a középpontban</h1>
+    </header>
+	
+
+	
+  <div id="wrapperi" >
+	
+	 <aside align="left" id="navi">
+	 <nav style="width:350px; background-color:#e8e8e3;">
+       <div class="content">
+		<form action = "belepes.php" method = "post">
+		 <fieldset style="width: 150px;">
+			<legend>Bejlentkezés</legend>
+			<br>
+			<input type="text" name="felhasznalo" placeholder="felhasználó" required><br><br>
+			<input type="password" name="jelszo" placeholder="jelszó" required><br><br>
+			<input type="submit" name="belepes" value="Belépés">
+			<br>&nbsp;
+         </fieldset>
+       </form>
+	   </div>
+	  
+       <div class="content">	  
+        <h3>Regisztrálja magát, ha még nem felhasználó!</h3>
+         <form action = "regisztracio.php" method = "post">
+         <fieldset style="width: 150px;">
+          <legend>Regisztráció</legend>
+          <br>
+         <input type="text" name="vezeteknev" placeholder="vezetéknév" required><br><br>
+         <input type="text" name="utonev" placeholder="utónév" required><br><br>
+         <input type="text" name="felhasznalo" placeholder="felhasználói név" required><br><br>
+         <input type="password" name="jelszo" placeholder="jelszó" required><br><br>
+         <input type="submit" name="regisztracio" value="Regisztráció">
+         <br>&nbsp;
+		</fieldset>
+	  </form>
+	 </div>
+	 </nav> 
+    </aside>
+	
+	 <div align="right" id="contenti">
+    </div> 
+ 
+ 
+ </div>
+  
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
+
+      
+    <footer>
+    Designed by <a href="http://www.bujdosoandras.net">Bujdosó András</a>
+    </footer>
+</body>
+</html>
